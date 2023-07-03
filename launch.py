@@ -14,6 +14,7 @@ python = sys.executable
 git = os.environ.get('GIT', "git")
 index_url = os.environ.get('INDEX_URL', "")
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def extract_arg(args, name):
     return [x for x in args if x != name], name in args
